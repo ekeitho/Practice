@@ -18,5 +18,6 @@ http://cwbuecheler.com/web/tutorials/2014/restful-web-app-node-express-mongodb/
 /cousera-sec-12-mobilecloud - thank you so much dr jules white for an amazing cousera class. i've learned so much about HTTP(S) protocols, the spring framework, how sessions and cookies work, and so much more!
 
 https://class.coursera.org/mobilecloud-001
-one of my deployed link example: http://future-snowfall-678.appspot.com/fun?echo=ekeitho rocks
+
+one of my deployed link example: http://future-snowfall-678.appspot.com/fun?echo=ekeitho+rocks
 
