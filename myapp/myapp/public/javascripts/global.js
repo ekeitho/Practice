@@ -60,3 +60,53 @@ function showUserInfo(event) {
     $('#userInfoLocation').text(thisUserObject.location);
 
 };
+
+function addUser(event) {
+
+   event.preventDefault();
+
+   //Super basic validation - increase errorCount variable if any fields are blank
+   var errorCount = 0;
+   $('#addUser input').each(function(index, val) {
+      if($(this).val === '') { errorCount++; }
+   });
+   
+   // Check and make sure errorCount's still at zero
+   if( errorCount === 0) {
+
+        // If it is, compile all user info into one object
+        var newUser = {
+            'username': $('#addUser fieldset input#inputUserName').val(),
+            'email': $('#addUser fieldset input#inputUserEmail').val(),
+            'fullname': $('#addUser fieldset input#inputUserFullname').val(),
+            'age': $('#addUser fieldset input#inputUserAge').val(),
+            'location': $('#addUser fieldset input#inputUserLocation').val(),
+            'gender': $('#addUser fieldset input#inputUserGender').val()
+        }
+      
+        $.ajax({
+            type: 'POST',
+            data: newUser,
+            url: 'users/adduser',
+            dataType: 'JSON'
+        }).done(function(response) {
+
+            // check for successful blank responses
+            if (response.msg === '') {
+
+               $('#addUser fieldset input').val('');
+            
+               populateTable();
+
+            }
+            else {
+
+               alert('Error: ' + response.msg);
+            }
+         });
+      }
+   else {
+      alert('Please fill in all fields');
+      return false;
+   }
+};
