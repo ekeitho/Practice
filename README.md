@@ -1,7 +1,9 @@
 Practice
 ========
 
-This is code that I've taken online and practiced with. This is used for referencing and any work will be noted.
+This is code that I've taken online and practiced with. 
+This is used for referencing and any work will be noted.
+I probably should be doing school work, but ... this is more fun. :p
 
 
 | path          | Description   |
